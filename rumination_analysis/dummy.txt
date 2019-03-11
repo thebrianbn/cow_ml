@@ -1,0 +1,22 @@
+###ADDING LATER
+try_this = whole[["Time","Sequence","Treatment","kg_consumed"]]
+##trying something
+seq1 = pd.get_dummies(try_this.Sequence)
+treat1 = pd.get_dummies(try_this.Treatment)
+plop = pd.concat([try_this[["Time","kg_consumed"]],seq1,treat1],axis=1)
+plop.head(10)
+
+X_train, X_test, y_train, y_test = train_test_split(plop.drop('kg_consumed', axis=1), plop["kg_consumed"], test_size=0.3)
+
+lasso = Lasso(alpha=0)
+lasso.fit(X_train, y_train)
+    
+"""print(lasso.score(X_test, y_test))
+
+randomf = RandomForestRegressor(n_estimators = 1000)
+
+randomf.fit(X_train,y_train)
+print(randomf.score(X_test,y_test))"""
+
+####################END Try
+
