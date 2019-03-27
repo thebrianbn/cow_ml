@@ -1,7 +1,0 @@
-predict kgPerH_ashed from military time, blood content (BUN,gluc,nefa,insu), ammonia, sequence, treatment, time
- ((*** assume linear relation between ammonia and time *** )
-(((*** assume both linear relation and no relation ( stays same value)
-
-alternatively, predit kgPer_asfed from ilitary time, treatment, sequence, ignoring external data as that's somewhat based on treatment and sequence.
-
-try both
